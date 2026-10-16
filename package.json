@@ -1,0 +1,108 @@
+{
+  "name": "night-of-fear",
+  "productName": "Night of Fear",
+  "version": "1.0.0",
+  "description": "Night of Fear - a game by Adyan (and Areeb)",
+  "main": "main.js",
+  "author": "Adyan",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win --x64 --publish never",
+    "dist:linux": "electron-builder --linux --x64 --publish never",
+    "dist:mac": "electron-builder --mac --publish never"
+  },
+  "devDependencies": {
+    "electron": "31.7.7",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.adyan.nightoffear",
+    "productName": "Night of Fear",
+    "copyright": "Copyright © 2026 Adyan",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "game/**",
+      "icon.png",
+      "icon.ico",
+      "icon.icns",
+      "HOW TO PLAY.txt"
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Night of Fear",
+      "artifactName": "Night-of-Fear-Setup-${version}.exe"
+    },
+    "linux": {
+      "icon": "icon.png",
+      "category": "Game",
+      "synopsis": "Night of Fear - a game by Adyan (and Areeb)",
+      "executableName": "night-of-fear",
+      "artifactName": "${name}-${version}-${arch}.${ext}",
+      "target": [
+        "AppImage",
+        "rpm",
+        "tar.gz"
+      ],
+      "desktop": {
+        "Name": "Night of Fear",
+        "Comment": "Night of Fear - a game by Adyan (and Areeb)",
+        "Categories": "Game;"
+      }
+    },
+    "appImage": {
+      "artifactName": "Night-of-Fear-${version}-${arch}.AppImage"
+    },
+    "rpm": {
+      "artifactName": "Night-of-Fear-${version}.${arch}.rpm",
+      "depends": [
+        "gtk3",
+        "libnotify",
+        "nss",
+        "libXScrnSaver",
+        "libXtst",
+        "xdg-utils",
+        "at-spi2-core",
+        "libuuid",
+        "libsecret"
+      ]
+    },
+    "mac": {
+      "icon": "icon.icns",
+      "identity": null,
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "artifactName": "Night-of-Fear-${version}-${arch}.${ext}"
+    },
+    "compression": "normal",
+    "npmRebuild": false
+  },
+  "allowScripts": {
+    "electron@31.7.7": true
+  }
+}

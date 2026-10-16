@@ -1,0 +1,19 @@
+NIGHT OF FEAR
+A game by Adyan (and Areeb)
+
+Start: double-click "Night of Fear.exe". Keep all the files in this folder together.
+The game works offline. No internet needed. Your progress saves on this computer.
+
+Controls
+  Mouse ............ look around (click the game to grab the mouse)
+  W A S D .......... walk        Shift ..... run
+  E ................ use / pick up
+  F ................ flashlight   G ......... fire a flare
+  M ................ map          J ......... journal
+  Esc .............. pause
+  F11 or Alt+Enter . full screen
+
+Best with headphones, in the dark.
+
+If Windows shows "Windows protected your PC", click "More info" and then "Run anyway".
+That appears because the game is new and not signed by a big publisher.
